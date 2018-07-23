@@ -1,0 +1,22 @@
+{% extends 'shoppinglist/_base.html' %}
+
+{% block title %}Shopping list with Django{% endblock %}
+
+{% block content %}
+<h1>Shopping lists</h1>
+<ul class="list-unstyled">
+    {% for list in lists %}
+        <li>
+            <p>
+                <a href="/shoppinglist/{{list.id}}/" class="btn btn-outline-secondary">{{list.name}}</a>
+                <a href="/shoppinglist/{{list.id}}/edit/" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/shoppinglist/{{list.id}}/delete/" class="btn btn-danger btn-sm"
+                   onclick="return confirm('Are you sure you want to delete this list?')">Delete</a>
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+<a href="add/" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Add new list" aria-hidden="true">
+    <span class="oi oi-plus"></span>
+</a>
+{% endblock %}

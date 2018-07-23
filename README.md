@@ -8,7 +8,7 @@ which helps to setup environment with the following requirements:
 2. Django 2.0.6
 3. XAMPP
 
-## create a django project
+## create a django (2.0.6) project
 
    In a virtual environment, enter: django-admin startproject django_apps_collection
 
@@ -45,3 +45,7 @@ which helps to setup environment with the following requirements:
     (py1) D:\Projects\django_apps_collections>python manage.py migrate
 
 All the apps will use the above command.
+
+Reference:  https://github.com/rodionovsasha/ShoppingListDjango/blob/master/shoppinglist/views.py
+
+Todo: Solve the redirect using view name issue when url is not the only app.
